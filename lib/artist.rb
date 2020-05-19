@@ -16,9 +16,9 @@ class Artist
   end
 
   #class method, gives you the instance of an artist that matches the name that is passed in
-  def self.find_by_name(name)
-    @@artists.detect{|a| a.name == name}
-  end
+  # def self.find_by_name(name)
+  #   @@artists.detect{|a| a.name == name}
+  # end
 
   #returns an array of all artists in the class
   def self.all
@@ -46,7 +46,7 @@ class Artist
   end
 
   #gsub method (in this particular case) will take all space occurrences and replace them with dashes
-  def to_param
-    name.downcase.gsub(' ', '-')
-  end
+  # def to_param
+  #   name.downcase.gsub(' ', '-')
+  # end
 end
