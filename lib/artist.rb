@@ -3,7 +3,11 @@ require 'pry'
 class Artist
 
   #using the extend keyword to make the class methods in the module Memorable usable in this class
-  extend Memorable
+  extend Memorable::ClassMethods
+  include Memorable::InstanceMethods
+  extend Findable
+  include Paramable
+
 
   attr_accessor :name
   attr_reader :songs
@@ -11,7 +15,8 @@ class Artist
   @@artists = []
 
   def initialize
-    @@artists << self
+    # @@artists << self
+    super
     @songs = []
   end
 
